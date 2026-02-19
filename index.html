@@ -106,6 +106,8 @@ button:hover { transform:scale(1.05); box-shadow:0 5px 20px rgba(255,215,0,0.6);
 </head>
 <body>
 
+  <audio id="backgroundMusic" src="ramadhan.mp3" loop></audio>
+
 <header>🌙 Dbara Tounsiya</header>
 
 <div class="container">
@@ -143,6 +145,26 @@ button:hover { transform:scale(1.05); box-shadow:0 5px 20px rgba(255,215,0,0.6);
 </audio>
 
 <script>
+
+
+    function start() {
+            
+            const backgroundMusic = document.getElementById('backgroundMusic');
+            
+          
+            
+            backgroundMusic.play().then(() => {
+                console.log('Music started successfully');
+            }).catch(error => {
+                console.log('Autoplay was prevented:', error);
+            });
+            
+    
+        }
+
+
+
+  
 // 🌟 Food Data
 const data = {
   soup: [
@@ -268,3 +290,4 @@ window.addEventListener('scroll',()=>{
 
 </body>
 </html>
+
