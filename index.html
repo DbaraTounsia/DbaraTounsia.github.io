@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ramadhan Meal Roulette</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #8B0000, #006400);
+        color: white;
+        text-align: center;
+        padding: 40px;
+    }
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        background: rgba(255,255,255,0.1);
+        padding: 25px;
+        border-radius: 20px;
+        width: 300px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .title {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    .result {
+        font-size: 1.2rem;
+        min-height: 40px;
+        margin: 15px 0;
+        transition: transform 0.2s ease;
+    }
+
+    .spinning {
+        animation: spinEffect 0.1s linear infinite;
+    }
+
+    @keyframes spinEffect {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+
+    button {
+        background: white;
+        color: #8B0000;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #FFD700;
+        transform: scale(1.05);
+    }
+</style>
+</head>
+<body>
+
+<h1>🍽 Ramadhan Meal Roulette</h1>
+
+<div class="container">
+
+    <div class="card">
+        <div class="title">🥣 Soup</div>
+        <div class="result" id="soupResult">Click Generate</div>
+        <button onclick="spin('soup')">Generate</button>
+    </div>
+
+    <div class="card">
+        <div class="title">🥟 Starter</div>
+        <div class="result" id="starterResult">Click Generate</div>
+        <button onclick="spin('starter')">Generate</button>
+    </div>
+
+    <div class="card">
+        <div class="title">🍲 Main</div>
+        <div class="result" id="mainResult">Click Generate</div>
+        <button onclick="spin('main')">Generate</button>
+    </div>
+
+</div>
+
+<script>
+    const data = {
+        soup: [
+            "Chorba Frik",
+            "Chorba Lsen Asfour",
+            "Chorba Hout",
+            "Velouté légumes",
+            "Hssou"
+        ],
+        starter: [
+            "Brik à l'œuf",
+            "Brik Thon",
+            "Salade Mechouia",
+            "Slata Tounsiya",
+            "Tajine Jben",
+            "Ojja Merguez"
+        ],
+        main: [
+            "Couscous bel 3allouch",
+            "Couscous bel Hout",
+            "Makrouna Salsa",
+            "Makrouna bel Escalope",
+            "Mloukhiya bel 3allouch",
+            "Kamounia bel 3allouch",
+            "Rfissa Tounsia",
+            "Djej Mhamer",
+            "Hout Mhamer",
+            "Kefta bel Batata"
+        ]
+    };
+
+    const used = {
+        soup: [],
+        starter: [],
+        main: []
+    };
+
+    function getRandom(type) {
+        if (used[type].length === data[type].length) {
+            used[type] = []; // Reset when all used
+        }
+
+        let remaining = data[type].filter(item => !used[type].includes(item));
+        let randomItem = remaining[Math.floor(Math.random() * remaining.length)];
+        used[type].push(randomItem);
+        return randomItem;
+    }
+
+    function spin(type) {
+        const resultElement = document.getElementById(type + "Result");
+        resultElement.classList.add("spinning");
+
+        let counter = 0;
+        const interval = setInterval(() => {
+            resultElement.innerText = data[type][Math.floor(Math.random() * data[type].length)];
+            counter++;
+            if (counter > 15) {
+                clearInterval(interval);
+                resultElement.classList.remove("spinning");
+                resultElement.innerText = getRandom(type);
+            }
+        }, 80);
+    }
+</script>
+
+</body>
+</html>
