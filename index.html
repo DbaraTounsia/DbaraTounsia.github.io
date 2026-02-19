@@ -150,6 +150,7 @@ button:hover { transform:scale(1.05); box-shadow:0 5px 20px rgba(255,215,0,0.6);
 <script>
 // 🌟 Food Data
 const data = {
+  const data = {
   soup: [
     {name: "Chorba Frik", img: "https://www.lapetitecuisinedenat.com/wp-content/uploads/2023/01/chorba-frik1.jpg"},
     {name: "Soupe", img: "https://s3-eu-west-1.amazonaws.com/images-ca-1-0-1-eu/tag_photos/original/966/soupes-potages-Fotolias_18958555.jpg"},
@@ -159,12 +160,42 @@ const data = {
   starter: [
     {name: "Salade César", img: "https://images.ricardocuisine.com/services/recipes/8440.jpg"},
     {name: "Salade Verte", img: "https://images.radio-canada.ca/v1/alimentation/recette/4x3/0002-salade-verte-vinaigrette-echalotes.jpg"},
-    {name: "Salade Tunisienne", img: "https://miyado-cuisine.tn/wp-content/uploads/2021/02/salade-tunisienne-min.jpg"}
+    {name: "Salade Tunisienne", img: "https://miyado-cuisine.tn/wp-content/uploads/2021/02/salade-tunisienne-min.jpg"},
+    {name: "Salade Mechouia", img: "https://img.cuisineaz.com/660x660/2024/08/16/i199460-salade-mechouia-tunisienne.jpg"},
+    {name: "Salade Mfawra", img: "https://i.ytimg.com/vi/XLTpTe_DFQs/maxresdefault.jpg"},
+    {name: "Salade Blankite", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLAB50cpfnUAKLG7BpJ2KtSY-gd8yl06bwOg&s"},
+    {name: "Salade Rouz", img: "https://i.ytimg.com/vi/Fb3_egdie-U/maxresdefault.jpg"},
+    {name: "Kaftegi", img: "https://i.ytimg.com/vi/XRu__-DyUK4/maxresdefault.jpg"},
+    {name: "Tastira", img: "https://lepetitjournal.com/sites/default/files/2022-07/TASTIRA%20TUNISIENNE.jpg"},
+    {name: "Brik", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0jDM8qVmoOfqDCrvUzEUQdlcL4pob3weA3w&s"},
+    {name: "Swabaa Fatma", img: "https://www.bennasafi.com/media/large/1556929244_photo.swaba3.fatma.01.jpg"},
+    {name: "Brik Danouni", img: "https://i.ytimg.com/vi/-6UWGcUN83Y/sddefault.jpg"},
+    {name: "Mini Sandwich", img: "https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2025/05/buffet-sandwich-header.jpg"},
+    {name: "Mini Chapatti", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxPFP_lkoeKn_ZOXTkxWkefLoUjpi9b8SRuA&s"},
+    {name: "Mini Pizza", img: "https://theclevermeal.com/wp-content/uploads/2024/11/minipizzas_4.jpg"},
+    {name: "Paté", img: "https://i.ytimg.com/vi/3JVYiellPoQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCFwG5Bc3wqucW8tcUEIddYi2sCzQ"},
+    {name: "Barquette", img: "https://www.bennasafi.com/media/large/1571678126_photo.jpg"}
   ],
   main: [
     {name: "Pizza", img: "https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg"},
     {name: "Tajine", img: "https://www.diversivore.com/wp-content/uploads/2020/09/Tajine-Maadnous-mobile-banner.jpg"},
-    {name: "Spaghetti", img: "https://lilluna.com/wp-content/uploads/2014/07/spaghetti-recipe-resize-9.jpg"}
+    {name: "Crêpe Salée", img: "https://img.cuisineaz.com/660x495/2025/01/29/i203794-crepe-salee-au-jambon-blanc.jpg"},
+    {name: "Quiche", img: "https://pekis.net/sites/default/files/styles/social_share_1200/public/2025-02/Quiche%20Lorraine.jpg?itok=fiC7u2nL"},
+    {name: "Spaghetti", img: "https://lilluna.com/wp-content/uploads/2014/07/spaghetti-recipe-resize-9.jpg"},
+    {name: "Mosli", img: "https://www.treatshomemade.com/fr/recipes/mosli-poulet/featured_1.jpg"},
+    {name: "Cannelloni", img: "https://www.galbani.be/wp-content/uploads/2020/06/contenu-16-1-800x600.jpg"},
+    {name: "Tagliatelle", img: "https://lepidor.com.tn/wp-content/uploads/Tagliatelle-sauce-tomate-et-boulettes-de-viande-500x500.jpg"},
+    {name: "Mermez", img: "https://tunisie.co/uploads/media/thumbnails/mermez-020217-1.jpg"},
+    {name: "Nwaser", img: "https://i.ytimg.com/vi/zcHLDg9ub3o/maxresdefault.jpg"},
+    {name: "Kammounia", img: "https://i.pinimg.com/564x/ac/09/ce/ac09cef237d10df1c30613ace7f2decf.jpg"},
+    {name: "Bolognaise", img: "https://img.cuisineaz.com/660x660/2016/07/29/i84653-spaghettis-bolognaise-rapides.jpg"},
+    {name: "Loubia", img: "https://www.auxdelicesdupalais.net/wp-content/uploads/2025/02/loubia-ragout-dharicots-blancs-16.jpg"},
+    {name: "Rouz", img: "https://i.ytimg.com/vi/JoGE1UiKUyg/maxresdefault.jpg"},
+    {name: "Rouz jerbi", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpqZMaHkWkE92zuLaH1yfCe14x7wI8zxeSnw&s"},
+    {name: "Jelbena", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStDP5oci1KxdDVYibjIzF86EFmF5ZUfGF1tQ&s"},
+    {name: "Tagine Malsou9a", img: "https://images.squarespace-cdn.com/content/v1/60623f7b9c9c50612533cd35/1621995134759-TTSUV1OHS5KMYYFEQX3X/Tagine.jpg"},
+    {name: "Couscous", img: "https://www.diari.tn/sites/default/files/image/recette/couscous-viande_0.jpg"},
+    {name: "Fondo9 il Galla", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMSfZaJm24wQ3X7MInlvXszylRHdp-mepdMw&s"}
   ]
 };
 
@@ -245,4 +276,5 @@ window.addEventListener('scroll',()=>{
 
 </body>
 </html>
+
 
