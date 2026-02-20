@@ -47,6 +47,22 @@ button:hover { transform:scale(1.05); box-shadow:0 5px 20px rgba(255,215,0,0.6);
 .spinning { animation:pulse 0.2s linear infinite; }
 @keyframes pulse { 0%{transform:scale(1);opacity:0.6;}50%{transform:scale(1.1);opacity:1;}100%{transform:scale(1);opacity:0.6;} }
 
+
+.gallery-btn{
+  margin-top:20px;
+  padding:12px 25px;
+  border:none;
+  border-radius:25px;
+  background:linear-gradient(45deg,#ffcc70,#ff8177);
+  color:#000;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+.gallery-btn:hover{
+  transform:scale(1.1);
+}
+
 /* 🌟 Stars, Moon, Lanterns */
 .star, .moon, .lantern {
   position:absolute;
@@ -150,6 +166,10 @@ button:hover { transform:scale(1.05); box-shadow:0 5px 20px rgba(255,215,0,0.6);
 <div class="generate-all">
   <button onclick="spinAll()">Générer un menu complet</button>
 </div>
+
+<a href="gallery.html">
+  <button class="gallery-btn">📖 Voir toute la carte</button>
+</a>
 
 <!-- Background music -->
 <audio autoplay loop id="bgMusic">
