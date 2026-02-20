@@ -1,6 +1,6 @@
 const foodData = {
   soup: [
-    {name: "Soupe", img: "https://s3-eu-west-1.amazonaws.com/images-ca-1-0-1-eu/tag_photos/original/966/soupes-potages-Fotolias_18958555.jpg"},
+    {name: "Soupe ", img: "https://s3-eu-west-1.amazonaws.com/images-ca-1-0-1-eu/tag_photos/original/966/soupes-potages-Fotolias_18958555.jpg"},
     {name: "Chorba Frik", img: "https://cdn2.webmanagercenter.com/di/wp-content/uploads/2019/05/chorba-frik.jpg"},
     {name: "Harira", img: "https://tse3.mm.bing.net/th/id/OIP.iHeLGpGlfXo2ohgbsgF6SgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"},
     {name: "Chorba au poisson", img: "https://tse2.mm.bing.net/th/id/OIP.ALIkx5Sr90ZLuus36Kd8aAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"},
