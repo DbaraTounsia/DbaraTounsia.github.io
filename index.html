@@ -136,35 +136,35 @@ button:hover { transform:scale(1.05); box-shadow:0 5px 20px rgba(255,215,0,0.6);
 
   <div class="card">
     <div class="category">🥣 Soup</div>
-    <img id="soupImage" class="food-img" src="placeholder.jpg">
+    <img id="soupImage" class="food-img" src="placeholder.png">
     <div class="result" id="soupResult">Click Spin</div>
     <button onclick="spin('soup')">Générer</button>
   </div>
 
   <div class="card">
     <div class="category">🥗 Salade</div>
-    <img id="SaladeImage" class="food-img" src="placeholder.jpg">
+    <img id="SaladeImage" class="food-img" src="placeholder.png">
     <div class="result" id="SaladeResult">Click Spin</div>
     <button onclick="spin('Salade')">Générer</button>
   </div>
 
   <div class="card">
     <div class="category">🥟 Entrée</div>
-    <img id="starterImage" class="food-img" src="placeholder.jpg">
+    <img id="starterImage" class="food-img" src="placeholder.png">
     <div class="result" id="starterResult">Click Spin</div>
     <button onclick="spin('starter')">Générer</button>
   </div>
 
   <div class="card">
     <div class="category">🍲 Plat Principal</div>
-    <img id="mainImage" class="food-img" src="placeholder.jpg">
+    <img id="mainImage" class="food-img" src="placeholder.png">
     <div class="result" id="mainResult">Click Spin</div>
     <button onclick="spin('main')">Générer</button>
   </div>
 
   <div class="card">
     <div class="category">🍫 Dessert</div>
-    <img id="DessertImage" class="food-img" src="placeholder.jpg">
+    <img id="DessertImage" class="food-img" src="placeholder.png">
     <div class="result" id="DessertResult">Click Spin</div>
     <button onclick="spin('Dessert')">Générer</button>
   </div>
@@ -212,7 +212,7 @@ function spin(type){
   const interval = setInterval(()=>{
     const r = data[type][Math.floor(Math.random()*data[type].length)];
     result.innerText = r.name;
-    img.src = r.img || "placeholder.jpg";
+    img.src = r.img || "placeholder.png";
     img.style.opacity = 0.5;
     sound.currentTime = 0;
     sound.play();
@@ -222,7 +222,7 @@ function spin(type){
       clearInterval(interval);
       const final = getRandom(type);
       result.innerText = final.name;
-      img.src = final.img || "placeholder.jpg";
+      img.src = final.img || "placeholder.png";
       img.style.opacity = 1;
     }
   },80);
@@ -265,3 +265,4 @@ createNightElements();
 
 </body>
 </html>
+
