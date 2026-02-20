@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dbara Tounsiya – Food Gallery</title>
 
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
@@ -17,12 +18,32 @@ h1 { margin-bottom:30px; font-size:2rem; }
 .card img { width:100%; border-radius:10px; height:150px; object-fit:cover; margin-bottom:10px; }
 .card .name { font-size:1rem; font-weight:500; }
 .category-title { text-align:left; margin-top:40px; margin-bottom:10px; font-size:1.5rem; font-weight:600; opacity:0.8; }
+
+.gallery-btn{
+  margin-top:20px;
+  padding:12px 25px;
+  border:none;
+  border-radius:25px;
+  background:linear-gradient(45deg,#ffcc70,#ff8177);
+  color:#000;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+.gallery-btn:hover{
+  transform:scale(1.1);
+}
+
+
 </style>
+
 </head>
 <body>
 
 <h1>🌙 Dbara Tounsiya Gallery</h1>
-
+<a href="index.html">
+  <button class="gallery-btn">⬅ Retour</button>
+</a>
 <div id="gallery"></div>
 
 <script>
