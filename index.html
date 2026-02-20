@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dbara Tounsiya</title>
+<title>Dbara Tounsiya – Ramadhan Night Iftar Picker</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
@@ -39,7 +39,7 @@ header { padding:30px; font-size:2rem; font-weight:700; }
 
 .category { font-size:1rem; font-weight:300; opacity:0.7; margin-bottom:10px; }
 .result { font-size:1.2rem; min-height:50px; margin:15px 0; }
-.food-img { width:100%; height:180px; object-fit:cover; border-radius:15px; margin-bottom:10px; transition:opacity 0.3s ease; opacity:0.7; }
+.food-img { width:100%; height:180px; object-fit:cover; border-radius:15px; margin-bottom:10px; transition:opacity 0.3s ease, transform 0.3s ease; opacity:0.7; }
 button { background:linear-gradient(45deg,#d4af37,#f5d76e); border:none; padding:10px 25px; border-radius:30px; font-weight:500; cursor:pointer; margin-top:10px; }
 button:hover { transform:scale(1.05); box-shadow:0 5px 20px rgba(255,215,0,0.6); }
 
@@ -116,9 +116,16 @@ button:hover { transform:scale(1.05); box-shadow:0 5px 20px rgba(255,215,0,0.6);
     <div class="result" id="soupResult">Click Spin</div>
     <button onclick="spin('soup')">Générer</button>
   </div>
+  
+  <div class="card">
+    <div class="category">🥗 Salade</div>
+    <img id="SaladeImage" class="food-img" src="https://upload.wikimedia.org/wikipedia/commons/4/42/Invisible_square.png" alt="Salade Image">
+    <div class="result" id="SaladeResult">Click Spin</div>
+    <button onclick="spin('Salade')">Générer</button>
+  </div>
 
   <div class="card">
-    <div class="category">🥟 Entrée </div>
+    <div class="category">🥟 Entrée</div>
     <img id="starterImage" class="food-img" src="https://upload.wikimedia.org/wikipedia/commons/4/42/Invisible_square.png" alt="Starter Image">
     <div class="result" id="starterResult">Click Spin</div>
     <button onclick="spin('starter')">Générer</button>
@@ -130,6 +137,13 @@ button:hover { transform:scale(1.05); box-shadow:0 5px 20px rgba(255,215,0,0.6);
     <div class="result" id="mainResult">Click Spin</div>
     <button onclick="spin('main')">Générer</button>
   </div>
+  
+  <div class="card">
+    <div class="category">🍫 Dessert</div>
+    <img id="DessertImage" class="food-img" src="https://upload.wikimedia.org/wikipedia/commons/4/42/Invisible_square.png" alt="Dessert Image">
+    <div class="result" id="DessertResult">Click Spin</div>
+    <button onclick="spin('Dessert')">Générer</button>
+  </div>
 
 </div>
 
@@ -137,7 +151,7 @@ button:hover { transform:scale(1.05); box-shadow:0 5px 20px rgba(255,215,0,0.6);
   <button onclick="spinAll()">Générer un menu complet</button>
 </div>
 
-<!-- Local Ramadhan music -->
+<!-- Background music -->
 <audio autoplay loop id="bgMusic">
    <source src="ramadhan.mp3" type="audio/mpeg">
 </audio>
@@ -149,13 +163,18 @@ button:hover { transform:scale(1.05); box-shadow:0 5px 20px rgba(255,215,0,0.6);
 
 <script>
 // 🌟 Food Data
-
-  const data = {
+const data = {
   soup: [
     {name: "Chorba Frik", img: "https://www.lapetitecuisinedenat.com/wp-content/uploads/2023/01/chorba-frik1.jpg"},
     {name: "Soupe", img: "https://s3-eu-west-1.amazonaws.com/images-ca-1-0-1-eu/tag_photos/original/966/soupes-potages-Fotolias_18958555.jpg"},
     {name: "Soupe Lentille", img: "https://content.joseedistasio.ca/app/uploads/2019/06/05145718/soupe_indienne_lentilles_rouges-josee_di_stasio.jpeg"},
     {name: "Langue d’Oiseau", img: "https://www.ptitchef.com/imgupl/recipe/chorba-aux-langues-d-oiseaux--lg-133900p201443.webp"}
+  ],
+  Salade: [
+    {name: "Salade César", img: "https://images.ricardocuisine.com/services/recipes/8440.jpg"},
+    {name: "Salade Verte", img: "https://images.radio-canada.ca/v1/alimentation/recette/4x3/0002-salade-verte-vinaigrette-echalotes.jpg"},
+    {name: "Salade Tunisienne", img: "https://miyado-cuisine.tn/wp-content/uploads/2021/02/salade-tunisienne-min.jpg"},
+    {name: "Salade Mechouia", img: "https://img.cuisineaz.com/660x660/2024/08/16/i199460-salade-mechouia-tunisienne.jpg"}
   ],
   starter: [
     {name: "Salade César", img: "https://images.ricardocuisine.com/services/recipes/8440.jpg"},
@@ -177,7 +196,7 @@ button:hover { transform:scale(1.05); box-shadow:0 5px 20px rgba(255,215,0,0.6);
     {name: "Barquette", img: "https://www.bennasafi.com/media/large/1571678126_photo.jpg"}
   ],
   main: [
-    {name: "Pizza", img: "https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg"},
+   {name: "Pizza", img: "https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg"},
     {name: "Tajine", img: "https://www.diversivore.com/wp-content/uploads/2020/09/Tajine-Maadnous-mobile-banner.jpg"},
     {name: "Crêpe Salée", img: "https://img.cuisineaz.com/660x495/2025/01/29/i203794-crepe-salee-au-jambon-blanc.jpg"},
     {name: "Quiche", img: "https://pekis.net/sites/default/files/styles/social_share_1200/public/2025-02/Quiche%20Lorraine.jpg?itok=fiC7u2nL"},
@@ -196,16 +215,20 @@ button:hover { transform:scale(1.05); box-shadow:0 5px 20px rgba(255,215,0,0.6);
     {name: "Tagine Malsou9a", img: "https://images.squarespace-cdn.com/content/v1/60623f7b9c9c50612533cd35/1621995134759-TTSUV1OHS5KMYYFEQX3X/Tagine.jpg"},
     {name: "Couscous", img: "https://www.diari.tn/sites/default/files/image/recette/couscous-viande_0.jpg"},
     {name: "Fondo9 il Galla", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMSfZaJm24wQ3X7MInlvXszylRHdp-mepdMw&s"}
+  ],
+  Dessert: [
+    {name: "Baklawa", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsYq6nBaW8rAHInfcCBgPuoT7brg4TKKNicw&s"},
+    {name: "Makroud", img: "https://patisseriemasmoudi.fr/cdn/shop/products/Makhroudhasmar_dc744b0b-7a9b-42fa-ba51-82521a558725_grande.jpg?v=1757076080"}
   ]
 };
 
-// ✅ No-repeat arrays
-const used = {soup:[],starter:[],main:[]};
+// Used items to prevent immediate repeats
+const used = {soup:[],Salade:[],starter:[],main:[],Dessert:[]};
 
 // Random no-repeat
 function getRandom(type){
-  if(used[type].length===data[type].length) used[type]=[];
-  let remaining = data[type].filter(item=>!used[type].includes(item));
+  if(used[type].length === data[type].length) used[type] = [];
+  let remaining = data[type].filter(item => !used[type].includes(item));
   let randomItem = remaining[Math.floor(Math.random()*remaining.length)];
   used[type].push(randomItem);
   return randomItem;
@@ -213,28 +236,35 @@ function getRandom(type){
 
 // Spin animation
 function spin(type){
-  const result=document.getElementById(type+'Result');
-  const img=document.getElementById(type+'Image');
-  const sound=document.getElementById('spinSound');
+  const result = document.getElementById(type+'Result');
+  const img = document.getElementById(type+'Image');
+  const sound = document.getElementById('spinSound');
   let counter=0;
-  const interval=setInterval(()=>{
-    const r=data[type][Math.floor(Math.random()*data[type].length)];
-    result.innerText=r.name;
-    img.style.opacity=0.5;
-    img.src=r.img;
-    sound.play(); // play spin sound
+  const interval = setInterval(()=>{
+    const r = data[type][Math.floor(Math.random()*data[type].length)];
+    result.innerText = r.name;
+    img.style.opacity = 0.5;
+    img.src = r.img;
+    sound.play();
     counter++;
     if(counter>15){
       clearInterval(interval);
-      const final=getRandom(type);
-      result.innerText=final.name;
-      img.src=final.img;
-      img.style.opacity=1;
+      const final = getRandom(type);
+      result.innerText = final.name;
+      img.src = final.img;
+      img.style.opacity = 1;
     }
   },80);
 }
 
-function spinAll(){spin("soup");spin("starter");spin("main");}
+// Spin all
+function spinAll(){ 
+  spin("soup");
+  spin("Salade");
+  spin("starter");
+  spin("main");
+  spin("Dessert");
+}
 
 // 🌌 Night Sky
 function createNightElements(){
@@ -269,13 +299,10 @@ window.addEventListener('scroll',()=>{
   const scrollY=window.scrollY;
   document.querySelectorAll('.star').forEach((s,i)=>{s.style.transform=`translateY(${scrollY*(i%5+1)*0.02}px)`;});
   const moon=document.querySelector('.moon');
-  if(moon) moon.style.transform=`translateY(${scrollY*0.05}px)`;
+  if(moon) moon.style.transform=`translateY(${scrollY*0.05}px)`; 
   document.querySelectorAll('.lantern').forEach((l,i)=>{l.style.transform=`translateY(${-scrollY*0.01}px)`;});
 });
 </script>
 
 </body>
 </html>
-
-
-
