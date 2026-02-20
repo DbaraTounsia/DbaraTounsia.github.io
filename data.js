@@ -1,6 +1,6 @@
 const foodData = {
   soup: [
-    {name: "Chorba Frik", img: "https://www.lapetitecuisinedenat.com/wp-content/uploads/2023/01/chorba-frik1.jpg"},
+    {name: "Chorba Frik ", img: "https://www.lapetitecuisinedenat.com/wp-content/uploads/2023/01/chorba-frik1.jpg"},
     {name: "Soupe", img: "https://s3-eu-west-1.amazonaws.com/images-ca-1-0-1-eu/tag_photos/original/966/soupes-potages-Fotolias_18958555.jpg"},
     {name: "Soupe Lentille", img: "https://content.joseedistasio.ca/app/uploads/2019/06/05145718/soupe_indienne_lentilles_rouges-josee_di_stasio.jpeg"},
     {name: "Langue d’Oiseau", img: "https://www.ptitchef.com/imgupl/recipe/chorba-aux-langues-d-oiseaux--lg-133900p201443.webp"}
