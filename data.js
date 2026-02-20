@@ -65,7 +65,7 @@ const foodData = {
     {name: "Fondo9 il Galla", img: "https://www.bing.com/th/id/OIP.q3Ugh9RrGufZFFXNtq10kAHaE7?w=188&h=135&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"},
     {name: "Rouz az3ar", img: "https://tse4.mm.bing.net/th/id/OIP.3hJr0K_sqoHvMI5xuviSygHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"},
     {name: "النواصر", img: "https://tse4.mm.bing.net/th/id/OIP.IcfDHTEgNbOwBZi4mVxoFwHaE7?rs=1&pid=ImgDetMain&o=7&rm=3"},
-    {name: "Mosli lham", img: ""},
+    {name: "Mosli lham", img: "https://www.bennasafi.com/media/large/1634817759_bvnbggg..1..jpg"},
     {name: "Mosli djej", img: "https://i.ytimg.com/vi/DFKJtp0xk1Q/maxresdefault.jpg"},
     {name: "Mermez", img: "https://voyage-tunisie.info/wp-content/uploads/2017/12/Mermez-2.jpg"},
     {name: "Lasagne", img: "https://tse4.mm.bing.net/th/id/OIP.RwJrIYk_kTOi7O6RaZmd2wHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"},
