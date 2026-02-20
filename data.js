@@ -1,24 +1,31 @@
 const foodData = {
   soup: [
-    {name: "Chorba Frik ", img: "https://www.lapetitecuisinedenat.com/wp-content/uploads/2023/01/chorba-frik1.jpg"},
     {name: "Soupe", img: "https://s3-eu-west-1.amazonaws.com/images-ca-1-0-1-eu/tag_photos/original/966/soupes-potages-Fotolias_18958555.jpg"},
-    {name: "Soupe Lentille", img: "https://content.joseedistasio.ca/app/uploads/2019/06/05145718/soupe_indienne_lentilles_rouges-josee_di_stasio.jpeg"},
+    {name: "Chorba Frik", img: "https://cdn2.webmanagercenter.com/di/wp-content/uploads/2019/05/chorba-frik.jpg"},
+    {name: "Harira", img: "https://tse3.mm.bing.net/th/id/OIP.iHeLGpGlfXo2ohgbsgF6SgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"},
+    {name: "Chorba au poisson", img: "https://tse2.mm.bing.net/th/id/OIP.ALIkx5Sr90ZLuus36Kd8aAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"},
+    {name: "Soupe Lentille", img: "https://tse3.mm.bing.net/th/id/OIP.h9kpSxtlJvqqEQvjO5yXUwHaKD?rs=1&pid=ImgDetMain&o=7&rm=3"},
+    {name: "Chorba à la viande", img: "https://img-3.journaldesfemmes.fr/5l6eSethLPC49tmpB83YST9j8vs=/750x500/eb2d8b18db59433bbdf917e7356322ac/ccmcms-jdf/40023060.jpg"},
+    {name: "Chorba aux légumes", img: "https://th.bing.com/th/id/R.11e03704d261dbc205724e016e98f7ff?rik=JkW5fvGmymX2WA&pid=ImgRaw&r=0"},
+    {name: "Soupe À L’Oignon", img: "https://tse4.mm.bing.net/th/id/OIP.RFdLFkx3D-1KR_2Wp27K5QHaE6?rs=1&pid=ImgDetMain&o=7&rm=3"},
+    {name: "Soupe lègumes", img: "https://tse3.mm.bing.net/th/id/OIP.r7vhFVc1QijdKtZ_WjRorQHaE6?rs=1&pid=ImgDetMain&o=7&rm=3"},
+    {name: "Tchich karnit", img: "https://th.bing.com/th/id/OIP.FLZ7YN09PngRZomdRcXUOwHaE7?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"},
+    {name: "Soupe aux champignons", img: "https://tse3.mm.bing.net/th/id/OIP.8DkOfJBdUjPyqji-Vhi0ZgHaEO?rs=1&pid=ImgDetMain&o=7&rm=3"},
     {name: "Langue d’Oiseau", img: "https://www.ptitchef.com/imgupl/recipe/chorba-aux-langues-d-oiseaux--lg-133900p201443.webp"}
   ],
   Salade: [
     {name: "Salade César", img: "https://images.ricardocuisine.com/services/recipes/8440.jpg"},
     {name: "Salade Verte", img: "https://images.radio-canada.ca/v1/alimentation/recette/4x3/0002-salade-verte-vinaigrette-echalotes.jpg"},
     {name: "Salade Tunisienne", img: "https://miyado-cuisine.tn/wp-content/uploads/2021/02/salade-tunisienne-min.jpg"},
+    {name: "Salade tunisienne", img: "https://recettes.de/images/blogs/la-cuisine-de-myriam/salade-tunisienne.640x480.jpg"},
+    {name: "Salade omek houria", img: "https://tse3.mm.bing.net/th/id/OIP.rWY4KNhpi4w6wClXjROAsAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"},
+    {name: "Salade de riz", img: "https://tse4.mm.bing.net/th/id/OIP.IdOfoHL0B2jsbL77FdoOJgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"},
+    {name: "Salade Mfawra", img: "https://i.ytimg.com/vi/Ttg5xOCsz84/maxresdefault.jpg"},
+    {name: "Salade chou", img: "https://www.boblechef.com/wp-content/uploads/2016/11/boblechef-recette-salade-de-chou-coleslaw-cremeuse-traditionelle.jpg"},
+    {name: "Salade Blankite", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLAB50cpfnUAKLG7BpJ2KtSY-gd8yl06bwOg&s"},
     {name: "Salade Mechouia", img: "https://img.cuisineaz.com/660x660/2024/08/16/i199460-salade-mechouia-tunisienne.jpg"}
   ],
   starter: [
-    {name: "Salade César", img: "https://images.ricardocuisine.com/services/recipes/8440.jpg"},
-    {name: "Salade Verte", img: "https://images.radio-canada.ca/v1/alimentation/recette/4x3/0002-salade-verte-vinaigrette-echalotes.jpg"},
-    {name: "Salade Tunisienne", img: "https://miyado-cuisine.tn/wp-content/uploads/2021/02/salade-tunisienne-min.jpg"},
-    {name: "Salade Mechouia", img: "https://img.cuisineaz.com/660x660/2024/08/16/i199460-salade-mechouia-tunisienne.jpg"},
-    {name: "Salade Mfawra", img: "https://i.ytimg.com/vi/XLTpTe_DFQs/maxresdefault.jpg"},
-    {name: "Salade Blankite", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLAB50cpfnUAKLG7BpJ2KtSY-gd8yl06bwOg&s"},
-    {name: "Salade Rouz", img: "https://i.ytimg.com/vi/Fb3_egdie-U/maxresdefault.jpg"},
     {name: "Kaftegi", img: "https://i.ytimg.com/vi/XRu__-DyUK4/maxresdefault.jpg"},
     {name: "Tastira", img: "https://lepetitjournal.com/sites/default/files/2022-07/TASTIRA%20TUNISIENNE.jpg"},
     {name: "Brik", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0jDM8qVmoOfqDCrvUzEUQdlcL4pob3weA3w&s"},
@@ -74,6 +81,17 @@ const foodData = {
   ],
   Dessert: [
     {name: "Baklawa", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsYq6nBaW8rAHInfcCBgPuoT7brg4TKKNicw&s"},
+    {name: "kunafa", img: "https://www.treatshomemade.com/fr/recipes/kunafa/featured_3.jpg"},
+    {name: "Bouza", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBeIt-4pOdeQ87D1-Bzr88jAOraKlvluS0sQ&s"},
+    {name: "Flan", img: "https://images.ctfassets.net/naglem4vigsd/3ghnulN27uzMoUucb6Bhrw/25e6313d2060e0847c1aa677d6243344/easy_flan2_0-en-us?fm=webp&w=3840"},
+    {name: "Mhalbia", img: "https://i.ytimg.com/vi/dDKUo9g9yvU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAYnAfhu2ixcE8tiyTKkzOWZ85fyw"},
+    {name: "Tiramisu", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe97N4zkJ-5OUHn93BNtM57TjUvSBi0REUaQ&s"},
+    {name: "Zlabia", img: "https://img.cuisineactuelle.fr/660x495/2018/09/25/i56092-patisserie-orientale-au-miel-zlabia.jpg"},
+    {name: "Tarte Citron", img: "https://resize.prod.femina.ladmedia.fr/rblr/652,438/img/var/2023-03/1679930573_recette-tarte-au-citron.jpg"},
+    {name: "Tarte fruits", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLHOKzXD5a-SnElaEa6mV5UbIkSBnQZ5F_cA&s"},
+    {name: "Cake chocolat", img: "https://www.enviedebienmanger.fr/sites/default/files/2023-03/Image3.png"},
+    {name: "Masfouf", img: "https://voyage-tunisie.info/wp-content/uploads/2017/12/Masfouf-2.jpg"},
+    {name: "Mousse au chocolat", img: "https://saveurhealthy.fr/wp-content/uploads/2021/11/mousse-chocolat-noir-au-miel.jpeg"},
     {name: "Makroud", img: "https://patisseriemasmoudi.fr/cdn/shop/products/Makhroudhasmar_dc744b0b-7a9b-42fa-ba51-82521a558725_grande.jpg?v=1757076080"}
   ]
 };
