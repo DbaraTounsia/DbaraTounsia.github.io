@@ -1,27 +1,79 @@
 const foodData = {
   soup: [
     {name: "Chorba Frik", img: "https://www.lapetitecuisinedenat.com/wp-content/uploads/2023/01/chorba-frik1.jpg"},
+    {name: "Soupe", img: "https://s3-eu-west-1.amazonaws.com/images-ca-1-0-1-eu/tag_photos/original/966/soupes-potages-Fotolias_18958555.jpg"},
     {name: "Soupe Lentille", img: "https://content.joseedistasio.ca/app/uploads/2019/06/05145718/soupe_indienne_lentilles_rouges-josee_di_stasio.jpeg"},
     {name: "Langue d’Oiseau", img: "https://www.ptitchef.com/imgupl/recipe/chorba-aux-langues-d-oiseaux--lg-133900p201443.webp"}
   ],
-
   Salade: [
+    {name: "Salade César", img: "https://images.ricardocuisine.com/services/recipes/8440.jpg"},
+    {name: "Salade Verte", img: "https://images.radio-canada.ca/v1/alimentation/recette/4x3/0002-salade-verte-vinaigrette-echalotes.jpg"},
     {name: "Salade Tunisienne", img: "https://miyado-cuisine.tn/wp-content/uploads/2021/02/salade-tunisienne-min.jpg"},
     {name: "Salade Mechouia", img: "https://img.cuisineaz.com/660x660/2024/08/16/i199460-salade-mechouia-tunisienne.jpg"}
   ],
-
   starter: [
+    {name: "Salade César", img: "https://images.ricardocuisine.com/services/recipes/8440.jpg"},
+    {name: "Salade Verte", img: "https://images.radio-canada.ca/v1/alimentation/recette/4x3/0002-salade-verte-vinaigrette-echalotes.jpg"},
+    {name: "Salade Tunisienne", img: "https://miyado-cuisine.tn/wp-content/uploads/2021/02/salade-tunisienne-min.jpg"},
+    {name: "Salade Mechouia", img: "https://img.cuisineaz.com/660x660/2024/08/16/i199460-salade-mechouia-tunisienne.jpg"},
+    {name: "Salade Mfawra", img: "https://i.ytimg.com/vi/XLTpTe_DFQs/maxresdefault.jpg"},
+    {name: "Salade Blankite", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLAB50cpfnUAKLG7BpJ2KtSY-gd8yl06bwOg&s"},
+    {name: "Salade Rouz", img: "https://i.ytimg.com/vi/Fb3_egdie-U/maxresdefault.jpg"},
+    {name: "Kaftegi", img: "https://i.ytimg.com/vi/XRu__-DyUK4/maxresdefault.jpg"},
+    {name: "Tastira", img: "https://lepetitjournal.com/sites/default/files/2022-07/TASTIRA%20TUNISIENNE.jpg"},
     {name: "Brik", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0jDM8qVmoOfqDCrvUzEUQdlcL4pob3weA3w&s"},
-    {name: "Mini Pizza", img: "https://theclevermeal.com/wp-content/uploads/2024/11/minipizzas_4.jpg"}
+    {name: "Swabaa Fatma", img: "https://www.bennasafi.com/media/large/1556929244_photo.swaba3.fatma.01.jpg"},
+    {name: "Brik Danouni", img: "https://i.ytimg.com/vi/-6UWGcUN83Y/sddefault.jpg"},
+    {name: "Mini Sandwich", img: "https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2025/05/buffet-sandwich-header.jpg"},
+    {name: "Mini Chapatti", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxPFP_lkoeKn_ZOXTkxWkefLoUjpi9b8SRuA&s"},
+    {name: "Mini Pizza", img: "https://theclevermeal.com/wp-content/uploads/2024/11/minipizzas_4.jpg"},
+    {name: "Paté", img: "https://i.ytimg.com/vi/3JVYiellPoQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCFwG5Bc3wqucW8tcUEIddYi2sCzQ"},
+    {name: "Barquette", img: "https://www.bennasafi.com/media/large/1571678126_photo.jpg"}
   ],
-
   main: [
-    {name: "Ojja", img: "https://i0.wp.com/lesjoyauxdesherazade.com/wp-content/uploads/2014/05/ojja-aux-merguez.jpg"},
-    {name: "Couscous", img: "https://assets.afcdn.com/recipe/20200528/111567_w1024h768c1cx540cy360.jpg"}
+   {name: "Pizza", img: "https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg"},
+    {name: "Tajine", img: "https://www.diversivore.com/wp-content/uploads/2020/09/Tajine-Maadnous-mobile-banner.jpg"},
+    {name: "Crêpe Salée", img: "https://img.cuisineaz.com/660x495/2025/01/29/i203794-crepe-salee-au-jambon-blanc.jpg"},
+    {name: "Quiche", img: "https://pekis.net/sites/default/files/styles/social_share_1200/public/2025-02/Quiche%20Lorraine.jpg?itok=fiC7u2nL"},
+    {name: "Spaghetti", img: "https://lilluna.com/wp-content/uploads/2014/07/spaghetti-recipe-resize-9.jpg"},
+    {name: "Mosli", img: "https://www.treatshomemade.com/fr/recipes/mosli-poulet/featured_1.jpg"},
+    {name: "Cannelloni", img: "https://www.galbani.be/wp-content/uploads/2020/06/contenu-16-1-800x600.jpg"},
+    {name: "Tagliatelle", img: "https://lepidor.com.tn/wp-content/uploads/Tagliatelle-sauce-tomate-et-boulettes-de-viande-500x500.jpg"},
+    {name: "Mermez", img: "https://tunisie.co/uploads/media/thumbnails/mermez-020217-1.jpg"},
+    {name: "Nwaser", img: "https://i.ytimg.com/vi/zcHLDg9ub3o/maxresdefault.jpg"},
+    {name: "Kammounia", img: "https://i.pinimg.com/564x/ac/09/ce/ac09cef237d10df1c30613ace7f2decf.jpg"},
+    {name: "Bolognaise", img: "https://img.cuisineaz.com/660x660/2016/07/29/i84653-spaghettis-bolognaise-rapides.jpg"},
+    {name: "Loubia", img: "https://www.auxdelicesdupalais.net/wp-content/uploads/2025/02/loubia-ragout-dharicots-blancs-16.jpg"},
+    {name: "Rouz", img: "https://i.ytimg.com/vi/JoGE1UiKUyg/maxresdefault.jpg"},
+    {name: "Rouz jerbi", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpqZMaHkWkE92zuLaH1yfCe14x7wI8zxeSnw&s"},
+    {name: "Jelbena", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStDP5oci1KxdDVYibjIzF86EFmF5ZUfGF1tQ&s"},
+    {name: "Tagine Malsou9a", img: "https://images.squarespace-cdn.com/content/v1/60623f7b9c9c50612533cd35/1621995134759-TTSUV1OHS5KMYYFEQX3X/Tagine.jpg"},
+    {name: "Couscous", img: "https://www.diari.tn/sites/default/files/image/recette/couscous-viande_0.jpg"},
+    {name: "Cannelloni", img: "https://th.bing.com/th/id/R.a7f34a79088ba8eedb225dd239e0aa03?rik=kAvYhVbyZTghuA&pid=ImgRaw&r=0"},
+    {name: "Rouz jerbi", img: "https://th.bing.com/th/id/OIP.CcABZ1RkHlsAvC7I8WhX0wHaEK?w=269&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"},
+    {name: "Bolognaise", img: "https://th.bing.com/th/id/OIP.FDUOSRHkLVaRY35r8vjdPAHaEK?w=302&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"},
+    {name: "Jelbena", img: "https://th.bing.com/th/id/OIP.KACOg_xkaI8gNbjj0gsPPAHaEf?w=268&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"},
+    {name: "Kafteji", img: "https://th.bing.com/th/id/OIP.kVgeS2i1jrizH5UBsbr-ywHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"},
+    {name: "Kammounia", img: "https://th.bing.com/th/id/OIP.BgQfeL7Awjz9uLtYcQZHigHaD4?w=321&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"},
+    {name: "Fondo9 il Galla", img: "https://www.bing.com/th/id/OIP.q3Ugh9RrGufZFFXNtq10kAHaE7?w=188&h=135&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"},
+    {name: "Rouz az3ar", img: "https://tse4.mm.bing.net/th/id/OIP.3hJr0K_sqoHvMI5xuviSygHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"},
+    {name: "النواصر", img: "https://tse4.mm.bing.net/th/id/OIP.IcfDHTEgNbOwBZi4mVxoFwHaE7?rs=1&pid=ImgDetMain&o=7&rm=3"},
+    {name: "Mosli lham", img: ""},
+    {name: "Mosli djej", img: "https://i.ytimg.com/vi/DFKJtp0xk1Q/maxresdefault.jpg"},
+    {name: "Mermez", img: "https://voyage-tunisie.info/wp-content/uploads/2017/12/Mermez-2.jpg"},
+    {name: "Lasagne", img: "https://tse4.mm.bing.net/th/id/OIP.RwJrIYk_kTOi7O6RaZmd2wHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"},
+    {name: "Pates fruits de mer", img: "https://tse2.mm.bing.net/th/id/OIP.Y_uJIGffS_1HeTGVuZYybwHaD4?rs=1&pid=ImgDetMain&o=7&rm=3"},
+    {name: "Lahmet Thon", img: "https://letemps.news/wp-content/uploads/2024/02/lahmet-thon.jpg"},
+    {name: "Ain spanyouria", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Ain_Sbaniouria.jpg/250px-Ain_Sbaniouria.jpg"},
+    {name: "Market kaaber (variantes)", img: "https://www.mangeonsbien.com/wp-content/uploads/2017/10/Melah1.jpg"},
+    {name: "Artichauts farcis", img: "https://tse3.mm.bing.net/th/id/OIP.-PCU6ye9zqmEpdGoPi-5TQHaFj?rs=1&pid=ImgDetMain&o=7&rm=3"},
+    {name: "Fell poison", img: "https://tse3.mm.bing.net/th/id/OIP.lfDUWj8ZsoW5og-H8_iahAHaNL?rs=1&pid=ImgDetMain&o=7&rm=3"},
+    {name: "Jelbena seiches", img: "https://tse4.mm.bing.net/th/id/OIP.wQ240o_7SQgTj_n2TRMmYQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"},
+    {name: "Poulet a la crème + Riz", img: "https://www.lateliergourmand.fr/wp-content/uploads/2024/12/poulet_a_la_creme_traditionnel_4745.jpg"},
+    {name: "Fondo9 il Galla", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMSfZaJm24wQ3X7MInlvXszylRHdp-mepdMw&s"}
   ],
-
   Dessert: [
-    {name: "Baklava", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsYq6nBaW8rAHInfcCBgPuoT7brg4TKKNicw&s"},
+    {name: "Baklawa", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsYq6nBaW8rAHInfcCBgPuoT7brg4TKKNicw&s"},
     {name: "Makroud", img: "https://patisseriemasmoudi.fr/cdn/shop/products/Makhroudhasmar_dc744b0b-7a9b-42fa-ba51-82521a558725_grande.jpg?v=1757076080"}
   ]
 };
