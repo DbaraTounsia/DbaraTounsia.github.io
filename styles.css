@@ -312,3 +312,41 @@ button:hover { transform:scale(1.05); box-shadow:0 5px 20px rgba(255,215,0,0.6);
 .navbar.hide{
   transform: translateY(-100%);
 }
+
+
+body{
+      background:#0f2027;
+      margin:0;
+      text-align:center;
+      font-family:sans-serif;
+      color:white;
+    }
+    iframe{
+      margin-top:30px;
+      border-radius:15px;
+    }
+    a{
+      display:inline-block;
+      margin-top:20px;
+      color:#ffcc70;
+      text-decoration:none;
+      font-size:18px;
+    }
+    
+    
+    
+
+  
+  #iftarCountdown {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffcc70;
+  margin: 20px 0;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(255, 204, 112, 0.3);
+}
+}
