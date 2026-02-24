@@ -4,127 +4,40 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dbara Tounsiya –  Food Gallery </title>
-
+<link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
 
-body {
-  background: linear-gradient(135deg,#0a0a1a,#1b1b40);
-  color:white;
-  text-align:center;
-  min-height:100vh;
-  padding:20px;
-}
-
-h1 { margin-bottom:30px; font-size:2rem; }
-
-.gallery {
-  display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-  gap:20px;
-  justify-items:center;
-}
-
-.card {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(15px);
-  border-radius:15px;
-  padding:10px;
-  width:200px;
-  transition:0.3s;
-}
-
-.card:hover { transform:scale(1.05); }
-
-.card img {
-  width:100%;
-  border-radius:10px;
-  height:150px;
-  object-fit:cover;
-  margin-bottom:10px;
-}
-
-.card .name {
-  font-size:1rem;
-  font-weight:500;
-}
-
-.category-title {
-  text-align:left;
-  margin-top:40px;
-  margin-bottom:15px;
-  font-size:1.5rem;
-  font-weight:600;
-  opacity:0.8;
-}
-
-.gallery-btn{
-  margin-bottom:20px;
-  padding:12px 25px;
-  border:none;
-  border-radius:25px;
-  background:linear-gradient(45deg,#ffcc70,#ff8177);
-  color:#000;
-  font-weight:600;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.gallery-btn:hover{
-  transform:scale(1.1);
-}
-
-
-.footer{
-  margin-top:50px;
-  padding:25px 10px;
-  background:rgba(255,255,255,0.05);
-  backdrop-filter:blur(10px);
-  border-top:1px solid rgba(255,255,255,0.1);
-  position:relative;
-  z-index:10;
-}
-
-.footer p{
-  margin:5px 0;
-  font-size:0.9rem;
-  opacity:0.8;
-}
-
-.insta-link{
-  display:inline-block;
-  margin-top:10px;
-  padding:8px 18px;
-  border-radius:20px;
-  background:linear-gradient(45deg,#fd5949,#d6249f,#285AEB);
-  color:white;
-  text-decoration:none;
-  font-weight:500;
-  transition:0.3s;
-}
-
-.insta-link:hover{
-  transform:scale(1.1);
-  box-shadow:0 5px 20px rgba(255,0,150,0.5);
-}
 </style>
 </head>
 
 <body>
+  
+  <nav class="navbar">
+  <div class="logo">🌙 Dbara Tounsiya</div>
 
-<h1>🌙 Dbara Tounsiya Gallery</h1>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="List.html">Menu</a></li>
+    <li><a href="suggest.html">Suggest</a></li>
+  </ul>
+</nav>
+
+
+
+
+<div id="gallery"></div>
+<br>
+<br>
+<br><br>
+<br>
+
+
 
 <a href="index.html">
   <button class="gallery-btn">⬅ Retour</button>
 </a>
-
-<a href="suggest.html">
-  <button class="gallery-btn">💡 Suggérer un plat </button>
-</a>
-
-<div id="gallery"></div>
 
 <!-- 🔥 LOAD DATABASE -->
 <script src="data.js"></script>
@@ -165,16 +78,4 @@ for(const category in foodData){
 </script>
 
 </body>
-
-
-<footer class="footer">
-  <p>© 2026 Dbara Tounsiya – All Rights Reserved</p>
-  <p>
-    Made with ❤️ by 
-    <strong>Ali Hadj Hassen</strong>
-  </p>
-  <a href="https://www.instagram.com/hassanalihadj/" target="_blank" class="insta-link">
-    📸 Follow me on Instagram
-  </a>
-</footer>
 </html>
