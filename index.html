@@ -73,11 +73,9 @@
 
 
 
-
-<audio autoplay loop>
-   <source src="ramadhan2.ogg" type="audio/mpeg">
+<audio id="bgAudio" autoplay loop preload="auto">
+   <source src="ramadhan2.ogg" type="audio/ogg">
 </audio>
-
 <audio id="spinSound">
    <source src="spin.mp3" type="audio/mpeg">
 </audio>
@@ -86,6 +84,10 @@
 <script src="data.js"></script>
 
 <script>
+
+const audio = document.getElementById('bgAudio');
+audio.volume = 0.3; // 30% volume
+  
 const data = foodData;
 
 const used = {soup:[],Salade:[],starter:[],main:[],Dessert:[]};
@@ -250,4 +252,5 @@ updateIftarCountdown();
   </a>
 </footer>
 </html>
+
 
