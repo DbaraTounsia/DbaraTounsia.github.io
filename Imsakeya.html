@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dbara Tounsiya – Imsakeya</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+/* Table style matching your dark glassy cards */
+.imsakeya-table {
+  width: 100%;
+  max-width: 700px;
+  margin: 50px auto;
+  border-collapse: collapse;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+.imsakeya-table th, .imsakeya-table td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 1rem;
+}
+
+.imsakeya-table th {
+  background: linear-gradient(45deg,#ffcc70,#ff8177);
+  color: #000;
+  font-weight: 600;
+}
+
+.imsakeya-table tr:hover {
+  background: rgba(255,204,112,0.1);
+}
+
+h1 {
+  color: #ffcc70;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 2rem;
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">🌙 Dbara Tounsiya</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="List.html">Menu</a></li>
+    <li><a href="Imsakeya.html">Imsakeya</a></li>
+    <li><a href="suggest.html">Suggest</a></li>
+  </ul>
+</nav>
+
+<h1>Imsakeya – Ramadhan 2026</h1>
+
+<table class="imsakeya-table">
+  <thead>
+    <tr>
+      <th>Jour</th>
+      <th>Imsak</th>
+      <th>Iftar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1 Ramadan / 19 Février</td><td>05:26</td><td>18:06</td></tr>
+    <tr><td>2 Ramadan / 20 Février</td><td>05:25</td><td>18:07</td></tr>
+    <tr><td>3 Ramadan / 21 Février</td><td>05:24</td><td>18:08</td></tr>
+    <tr><td>4 Ramadan / 22 Février</td><td>05:23</td><td>18:09</td></tr>
+    <tr><td>5 Ramadan / 23 Février</td><td>05:21</td><td>18:10</td></tr>
+    <tr><td>6 Ramadan / 24 Février</td><td>05:20</td><td>18:11</td></tr>
+    <tr><td>7 Ramadan / 25 Février</td><td>05:19</td><td>18:12</td></tr>
+    <tr><td>8 Ramadan / 26 Février</td><td>05:18</td><td>18:13</td></tr>
+    <tr><td>9 Ramadan / 27 Février</td><td>05:16</td><td>18:14</td></tr>
+    <tr><td>10 Ramadan / 28 Février</td><td>05:15</td><td>18:15</td></tr>
+    <tr><td>11 Ramadan / 01 Mars</td><td>05:14</td><td>18:16</td></tr>
+    <tr><td>12 Ramadan / 02 Mars</td><td>05:12</td><td>18:17</td></tr>
+    <tr><td>13 Ramadan / 03 Mars</td><td>05:11</td><td>18:18</td></tr>
+    <tr><td>14 Ramadan / 04 Mars</td><td>05:10</td><td>18:19</td></tr>
+    <tr><td>15 Ramadan / 05 Mars</td><td>05:08</td><td>18:20</td></tr>
+    <tr><td>16 Ramadan / 06 Mars</td><td>05:07</td><td>18:21</td></tr>
+    <tr><td>17 Ramadan / 07 Mars</td><td>05:06</td><td>18:22</td></tr>
+    <tr><td>18 Ramadan / 08 Mars</td><td>05:04</td><td>18:23</td></tr>
+    <tr><td>19 Ramadan / 09 Mars</td><td>05:03</td><td>18:23</td></tr>
+    <tr><td>20 Ramadan / 10 Mars</td><td>05:01</td><td>18:24</td></tr>
+    <tr><td>21 Ramadan / 11 Mars</td><td>05:00</td><td>18:25</td></tr>
+    <tr><td>22 Ramadan / 12 Mars</td><td>04:58</td><td>18:26</td></tr>
+    <tr><td>23 Ramadan / 13 Mars</td><td>04:57</td><td>18:27</td></tr>
+    <tr><td>24 Ramadan / 14 Mars</td><td>04:55</td><td>18:28</td></tr>
+    <tr><td>25 Ramadan / 15 Mars</td><td>04:54</td><td>18:29</td></tr>
+    <tr><td>26 Ramadan / 16 Mars</td><td>04:52</td><td>18:30</td></tr>
+    <tr><td>27 Ramadan / 17 Mars</td><td>04:51</td><td>18:31</td></tr>
+    <tr><td>28 Ramadan / 18 Mars</td><td>04:49</td><td>18:32</td></tr>
+    <tr><td>29 Ramadan / 19 Mars</td><td>04:48</td><td>18:33</td></tr>
+    <tr><td>30 Ramadan / 20 Mars</td><td>04:46</td><td>18:33</td></tr>
+  </tbody>
+</table>
+
+<!-- Night Elements -->
+<script>
+function createNightElements(){
+  for(let i=0;i<40;i++){
+    const star=document.createElement('div');
+    star.className='star';
+    star.style.top=Math.random()*window.innerHeight+'px';
+    star.style.left=Math.random()*window.innerWidth+'px';
+    star.style.animationDuration=(5+Math.random()*5)+'s';
+    document.body.appendChild(star);
+  }
+
+  for(let i=0;i<10;i++){
+    const lantern=document.createElement('div');
+    lantern.className='lantern';
+    lantern.style.left=Math.random()*window.innerWidth+'px';
+    lantern.style.bottom='-20px';
+    lantern.style.animationDuration=(10+Math.random()*10)+'s';
+    document.body.appendChild(lantern);
+  }
+
+  const moon=document.createElement('div');
+  moon.className='moon';
+  document.body.appendChild(moon);
+}
+
+createNightElements();
+</script>
+
+<footer class="footer">
+  <p>© 2026 Dbara Tounsiya – All Rights Reserved</p>
+  <p>Made with ❤️ by <strong>Ali Hadj Hassen</strong></p>
+  <a href="https://www.instagram.com/hassanalihadj/" target="_blank" class="insta-link">📸 Follow me on Instagram</a>
+</footer>
+
+</body>
+</html>
