@@ -43,6 +43,16 @@ h1 {
   margin-top: 100px;
   font-size: 2rem;
 }
+
+/* Highlight current day in light orange */
+.today {
+  background-color: rgba(255, 153, 51, 0.4); /* light orange */
+  font-weight: bold;
+}
+@keyframes glow {
+  from { box-shadow: 0 0 5px #fff; }
+  to { box-shadow: 0 0 20px #fff; }
+}
 </style>
 </head>
 <body>
@@ -128,6 +138,35 @@ function createNightElements(){
 }
 
 createNightElements();
+// Highlight the current day in the Imsakeya table
+const today = new Date(); // current date
+const table = document.querySelector(".imsakeya-table tbody");
+const rows = table.querySelectorAll("tr");
+
+// Map French months to numbers
+const monthMap = {
+  "Février": 2,
+  "Mars": 3
+};
+
+rows.forEach(row => {
+  const dateText = row.cells[0].innerText; // e.g. "1 Ramadan / 19 Février"
+  const parts = dateText.split("/"); // ["1 Ramadan ", " 19 Février"]
+  if(parts.length === 2){
+    const dayMonth = parts[1].trim().split(" "); // ["19", "Février"]
+    const day = parseInt(dayMonth[0], 10);
+    const monthName = dayMonth[1];
+    const month = monthMap[monthName];
+
+    if(today.getDate() === day && (today.getMonth()+1) === month){
+      row.style.backgroundColor = "rgba(255, 153, 51, 0.4)"; // light orange
+      row.style.fontWeight = "bold";
+    }
+  }
+});
+</script>
+
+
 </script>
 
 <footer class="footer">
