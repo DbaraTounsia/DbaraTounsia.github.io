@@ -126,6 +126,41 @@ button:hover { transform:scale(1.05); box-shadow:0 5px 20px rgba(255,215,0,0.6);
   0%{transform:translateY(0);}
   100%{transform:translateY(-700px);}
 }
+
+
+
+.footer{
+  margin-top:50px;
+  padding:25px 10px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  border-top:1px solid rgba(255,255,255,0.1);
+  position:relative;
+  z-index:10;
+}
+
+.footer p{
+  margin:5px 0;
+  font-size:0.9rem;
+  opacity:0.8;
+}
+
+.insta-link{
+  display:inline-block;
+  margin-top:10px;
+  padding:8px 18px;
+  border-radius:20px;
+  background:linear-gradient(45deg,#fd5949,#d6249f,#285AEB);
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.insta-link:hover{
+  transform:scale(1.1);
+  box-shadow:0 5px 20px rgba(255,0,150,0.5);
+}
 </style>
 </head>
 <body>
@@ -264,6 +299,17 @@ createNightElements();
 </script>
 
 </body>
-</html>
 
+
+<footer class="footer">
+  <p>© 2026 Dbara Tounsiya – All Rights Reserved</p>
+  <p>
+    Made with ❤️ by 
+    <strong>Ali Hadj Hassen</strong>
+  </p>
+  <a href="https://www.instagram.com/hassanalihadj/" target="_blank" class="insta-link">
+    📸 Follow me on Instagram
+  </a>
+</footer>
+</html>
 
