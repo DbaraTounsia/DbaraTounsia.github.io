@@ -17,7 +17,9 @@
 <nav class="navbar">
   <div class="logo">🌙 Dbara Tounsiya</div>
 
-  <ul class="nav-links">
+  <div class="menu-toggle" id="menuToggle">☰</div>
+
+  <ul class="nav-links" id="navLinks">
     <li><a href="index.html">Home</a></li>
     <li><a href="List.html">Menu</a></li>
     <li><a href="Imsakeya.html">Imsakeya</a></li>
@@ -237,6 +239,17 @@ function updateIftarCountdown() {
 
 setInterval(updateIftarCountdown, 1000);
 updateIftarCountdown();
+
+
+const toggle = document.getElementById("menuToggle");
+const nav = document.getElementById("navLinks");
+
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+
+
+
 </script>
 </body>
 

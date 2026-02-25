@@ -15,11 +15,12 @@
   <nav class="navbar">
   <div class="logo">🌙 Dbara Tounsiya</div>
 
-  <ul class="nav-links">
+  <div class="menu-toggle" id="menuToggle">☰</div>
+
+  <ul class="nav-links" id="navLinks">
     <li><a href="index.html">Home</a></li>
     <li><a href="List.html">Menu</a></li>
-        <li><a href="Imsakeya.html">Imsakeya</a></li>
-
+    <li><a href="Imsakeya.html">Imsakeya</a></li>
     <li><a href="suggest.html">Suggest</a></li>
   </ul>
 </nav>
@@ -27,7 +28,14 @@
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfCl9c4w5HeV21REsq0ZcbfzgcHoYxMmmz6SjfwJKExR5H4bQ/viewform?embedded=true"
 width="90%" height="900"></iframe>
+<script>
+const toggle = document.getElementById("menuToggle");
+const nav = document.getElementById("navLinks");
 
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+</script>
 
 </body>
 
