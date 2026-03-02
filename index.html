@@ -244,7 +244,12 @@ function updateIftarCountdown() {
 
 setInterval(updateIftarCountdown, 1000);
 updateIftarCountdown();
-
+// Make countdown clickable
+const countdownEl = document.getElementById("iftarCountdown");
+countdownEl.style.cursor = "pointer"; // show pointer on hover
+countdownEl.addEventListener("click", () => {
+  window.location.href = "https://dbaratounsia.github.io/Iftar.html";
+});
 
 const toggle = document.getElementById("menuToggle");
 const nav = document.getElementById("navLinks");
@@ -270,6 +275,7 @@ toggle.addEventListener("click", () => {
   </a>
 </footer>
 </html>
+
 
 
 
