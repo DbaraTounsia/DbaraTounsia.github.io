@@ -3,23 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dbara Tounsiya </title>
+<title>Dbara Tounsiya – Ramadhan Night Iftar Picker </title>
 <link rel="stylesheet" href="styles.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-  
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZFJ9VQKE7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-ZZFJ9VQKE7');
-
-  
-</script>
 <style>
 
 </style>
@@ -35,7 +23,7 @@
     <li><a href="index.html">Home</a></li>
     <li><a href="List.html">Menu</a></li>
     <li><a href="Imsakeya.html">Imsakeya</a></li>
-    <li><a href="suggest.html">Suggestion</a></li>
+    <li><a href="suggest.html">Suggest</a></li>
   </ul>
 </nav>
 
@@ -224,20 +212,25 @@ const iftarTimes = [
   "2026-03-19T18:31:00",
   "2026-03-20T18:31:00",
 ];
-
 function updateIftarCountdown() {
   const now = new Date();
-  const todayIndex = now.getDate() - 19; // Feb 19 = day 1
-  if(todayIndex < 0 || todayIndex >= iftarTimes.length){
-    document.getElementById("iftarCountdown").innerText = "Ramadhan not started or finished 🌙";
+  const startDate = new Date("2026-02-19T00:00:00"); // Ramadan Day 1
+  const countdownEl = document.getElementById("iftarCountdown");
+
+  // Calculate difference in days
+  const diffTime = now - startDate;
+  const dayIndex = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+  if(dayIndex < 0 || dayIndex >= iftarTimes.length){
+    countdownEl.innerText = "Ramadhan not started or finished 🌙";
     return;
   }
 
-  const iftarTime = new Date(iftarTimes[todayIndex]).getTime();
+  const iftarTime = new Date(iftarTimes[dayIndex]).getTime();
   const distance = iftarTime - now;
 
   if(distance <= 0){
-    document.getElementById("iftarCountdown").innerText = "Sa7a Chribitkom! 🌙🍽️";
+    countdownEl.innerText = "Sa7a Chribitkom! 🌙🍽️";
     return;
   }
 
@@ -245,7 +238,7 @@ function updateIftarCountdown() {
   const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
   const seconds = Math.floor((distance % (1000*60)) / 1000);
 
-  document.getElementById("iftarCountdown").innerText =
+  countdownEl.innerText =
     `Cha9an Fater : ${hours}h ${minutes}m ${seconds}s 🌙`;
 }
 
@@ -263,8 +256,6 @@ toggle.addEventListener("click", () => {
 
 
 </script>
-
-
 </body>
 
 
@@ -279,12 +270,6 @@ toggle.addEventListener("click", () => {
   </a>
 </footer>
 </html>
-
-
-
-
-
-
 
 
 
